@@ -13,14 +13,14 @@
 		 float:left;text-align: center; line-height: 40px; color:white; font-size: 2em;  margin-left: 10px;margin-right:10px; font-weight: bold;}
 		header #menu{width:2000px;height:40px;position:relative;left:calc(50% - 350px);transition: all 0.3s; opacity: 0;}
 		#sectionA{background: black;  transition: all 1s;}
-		#sectionB{background: red; transition: all 1s;}
+		#sectionB{background: red; transition: all 0.7s;}
 		#sectionC{background: url('fancy.png'); background-size:auto 100%; transition: all 1s;}
 		#sectionD{background: url('2.png'); background-size:100% auto;background-position: 0px -120px; transition: all 1s;}
 		#sectionE{background: black;}
 		#sectionF{background: black;}
 		h1 {color: white; text-align: center; position: relative; top:350px; font-size: 5em; font-weight: 900;}
-		h2 {color: white; text-align: center; position: relative; margin-top:0; font-size: 3em; font-weight: 700;}
-		#titleB {color: white; text-align: center; position: relative; top:500px; text-shadow: 4px 4px black; transition: all 1s;}
+		h2, h3, h4, h5 {color: white; text-align: center; position: relative; margin-top:0; font-size: 3em; font-weight: 700;}
+		#titleB, #stitle2, #stitle3, #stitle4 {color: white; text-align: center; position: relative; top:350px; text-shadow: 4px 4px black; transition: all 0.7s;}
 		
 	</style>
 </head>
@@ -42,11 +42,11 @@
 		<h1 id="titleA">CHAENY</h1>
 	</div>
 	<div class="section" id="sectionB">
-		<h2 id="titleB" >BETTER DAYS ARE COMING.<br>
-			BETTER DAYS ARE COMING.<br>
-			BETTER DAYS ARE COMING.<br>
-			BETTER DAYS ARE COMING.</h2>
-	</div>
+		<h2 id="titleB" >BETTER DAYS ARE COMING.</h2>
+		<h3 id="stitle2">BETTER DAYS ARE COMING.</h3>
+		<h4 id="stitle3">BETTER DAYS ARE COMING.</h4>
+		<h5 id="stitle4">BETTER DAYS ARE COMING.</h5>
+		</div>
 	<div class="section" id="sectionC">
 		<img id = "heart" img src="instagram.gif" img style="margin-top: 30%; margin-left: 50%; width: 200px; height: 100px;" > 
 	</div>
@@ -55,7 +55,7 @@
 			
 		</div>
 	<div class="section" id="sectionE">
-		<h1 id="titleD"> Thanks </h1>
+		<h1 id="titleD">  </h1>
 	</div>
 	<div class="section" id="sectionF">
 		<h1 id="titleE"> Thanks </h1>
@@ -65,71 +65,100 @@
 		console.log(document.body.scrollTop);
 		var scrollH = document.body.scrollTop;
 			
-			if(scrollH >50){
+		if(scrollH >50){
 			header.style.position = "fixed";
 			header.style.zIndex = "9999";
 			menu.style.left = "0px";
 			menu.style.opacity = "1";
-			}else{			
+		}else{			
 			header.style.position = "relative";
 			menu.style.left = "calc(50%)";
 			menu.style.opacity = "0";}
 
-			if(scrollH > 51 && scrollH < 500){
+		if(scrollH > 51 && scrollH < 500){
 			sectionA.style.background = "white";
 			titleA.style.color = "black";
 			titleA.style.fontSize = "10em";
 			titleA.style.fontWeight = "bold";
-			}else{
+		}else{
 			sectionA.style.background = "black";
 			titleA.style.color = "white";
 			titleA.style.fontSize= "5em";
 			titleA.style.fontWeight= "900";
 			}
 
-			if(scrollH > 52 && scrollH < 950){
+		if(scrollH > 52 && scrollH < 950){
 			menuA.style.opacity = "1";}
-			else{
+		else{
 			menuA.style.opacity = "0";	
-				}
+			}
 
-			if(scrollH > 951 && scrollH < 1950){
+		if(scrollH > 951 && scrollH < 1950){
 			menuB.style.opacity = "1";}
-			else{
+		else{
 			menuB.style.opacity = "0";	
-				}
+			}
 
-			if(scrollH > 2000 && scrollH < 2400){
+		if(scrollH>1050 && scrollH<1400){
+			titleB.style.fontSize = "5em";
+			titleB.style.textShadow = "5px 5px black";
+			
+			stitle2.style.fontSize = "4em";
+			stitle2.style.textShadow = "5px 5px black";
+			stitle3.style.fontSize = "3em";
+			stitle3.style.textShadow = "5px 5px black";
+			stitle4.style.fontSize = "2em";
+			stitle4.style.textShadow = "5px 5px black";
+		}else {
+			titleB.style.fontSize = "3em";
+			titleB.style.textShadow = "4px 4px black";
+			stitle2.style.fontSize = "3em";
+			stitle2.style.textShadow = "4px 4px black";
+			stitle3.style.fontSize = "3em";
+			stitle3.style.textShadow = "4px 4px black";
+			stitle4.style.fontSize = "3em";
+			stitle4.style.textShadow = "4px 4px black";
+			}
+
+		if(scrollH > 2000 && scrollH < 2300){
 			heart.style.width = "200px";
 			heart.style.height = "100px";
 			
-			}else{
+		}else{
 			heart.style.width = "0px";
 			heart.style.height = "0px";
 		}
-			if(scrollH > 1951 && scrollH < 2950){
+		if(scrollH > 1951 && scrollH < 2950){
 			menuC.style.opacity = "1";}
-			else{
+		else{
 			menuC.style.opacity = "0";	
 				}
-			
-			if(scrollH > 2951 && scrollH < 3950){
+
+
+		if(scrollH > 2951 && scrollH < 3950){
 			menuD.style.opacity = "1";}
-			else{
+		else{
 			menuD.style.opacity = "0";	
-				}
+			}
 
-			if(scrollH > 2800 && scrollH < 3400 ){
-			sectionD.style.backgroundAttachment = "fixed"; 
-				}
+		if(scrollH > 2000){
+			sectionD.style.backgroundAttachment = "fixed"; }
 
-			if(scrollH > 3951 && scrollH < 4950){
+		if(scrollH > 3000 && scrollH < 3350 ){
+			titleC.innerHTML = "ouch!";
+			}else {
+			titleC.innerHTML = "Who cares?"
+			}
+			
+
+
+		if(scrollH > 3951 && scrollH < 4950){
 			menuE.style.opacity = "1";}
-			else{
+		else{
 			menuE.style.opacity = "0";	
 				}
 
-			if(scrollH > 5000 && scrollH < 5300 ){
+		if(scrollH > 5000 && scrollH < 5300 ){
 			titleE.style.fontSize = "6em";
 			titleE.style.fontWeight = "100";
 			titleE.style.transform = "rotateX(180deg)";
@@ -143,7 +172,7 @@
 
 		if(scrollH > 4951 && scrollH < 5950){
 			menuF.style.opacity = "1";}
-			else{
+		else{
 			menuF.style.opacity = "0";	
 				}
 
