@@ -7,23 +7,23 @@
 	html { font-family: 'Spoqa Han Sans'; font-weight: 300;}
 	body, head {margin: 0; padding: 0; margin-top: 0;}
 		.section{height: 1000px; transition: all 2s;
-		 margin-top: 0;}
+		 margin-top: 0; position: relative;}
 		 header {background: black;}
 		 header li{width:40px;height:40px;color:black;background: black; 
 		 float:left;text-align: center; line-height: 40px; color:white; font-size: 2em;  margin-left: 10px;margin-right:10px; font-weight: bold;}
-		header #menu{width:1400px;height:40px;position:relative;left:calc(50% - 350px);transition: all 0.3s; opacity: 0;}
+		header #menu{width:1400px;height:40px;position:relative; left:calc(50% - 350px);transition: all 0.3s; opacity: 0;}
 		#sectionA{background: black;  transition: all 1s;}
 		#sectionB{background: red; transition: all 0.7s;}
 		#sectionC{background: url('fancy.png'); background-size:auto 100%; transition: all 1s;}
-		#sectionD{background: url('2.png'); background-size:100% auto;background-position: 0px -120px; transition: all 1s;}
-		#sectionE{background: white;}
-		#sectionF{background: black;}
+		#sectionD{background: url('2.png'); background-size:100% auto; background-position: 0px -120px; transition: all 1s;}
+		#sectionE{background: white; transition: all 1s;}
+		#sectionF{background: black; transition: all 1s;}
 		h1 {color: white; text-align: center; position: relative; top:350px; font-size: 5em; font-weight: 900;}
 		h2, h3, h4, h5 {color: white; text-align: center; position: relative; margin-top:0; font-size: 3em; font-weight: 700;}
 		#titleA {transition: all 1s;}
 		#titleB, #stitle2, #stitle3, #stitle4 {color: white; text-align: center; position: relative; top:350px; text-shadow: 4px 4px black; transition: all 0.7s;}
 		#titleC {transition: all 1s;}
-		#titleD {font-size: 0.5em; font-weight: bold; color: gray;}
+		#titleD {font-size: 0.5em; font-weight: bold; color: gray; transition:all 1s;}
 		#titleE {transition: all 1s;}
 
 		
@@ -53,7 +53,7 @@
 		<h5 id="stitle4">BETTER DAYS ARE COMING.</h5>
 		</div>
 	<div class="section" id="sectionC">
-		<img id = "heart" img src="instagram.gif" img style="margin-top: 30%; margin-left: 50%; width: 200px; height: 100px;" > 
+		<img id = "heart" img src="instagram.gif" img style="margin-top: 30%; margin-left: 50%; width: 200px; height: 100px; transition:all 0.8s;"> 
 	</div>
 	<div class="section" id="sectionD">
 		<h1 id="titleC"> Who cares? </h1>
@@ -104,7 +104,7 @@
 			menuB.style.opacity = "0";	
 			}
 
-		if(scrollH>1050 && scrollH<1400){
+		if(scrollH>930 && scrollH<1400){
 			titleB.style.fontSize = "5em";
 			titleB.style.textShadow = "5px 5px black";
 			
@@ -146,7 +146,7 @@
 			menuD.style.opacity = "0";	
 			}
 
-		if(scrollH > 2000 && scrollH < 3350 ){
+		if(scrollH > 50){
 			sectionD.style.backgroundAttachment = "fixed"; }
 
 		if(scrollH > 3000 && scrollH < 3350 ){
