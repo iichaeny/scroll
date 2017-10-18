@@ -1,0 +1,167 @@
+<!doctype html>
+<head>
+	<meta charset="uft-8">
+	<link href='normalize.css' rel="stylesheet">
+	<link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+	<style>
+	html { font-family: 'Spoqa Han Sans'; font-weight: 300;}
+	body, head {margin: 0; padding: 0; margin-top: 0;}
+		.section{height: 1000px; transition: all 2s;
+		 margin-top: 0;}
+		 header {background: black;}
+		 header li{width:40px;height:40px;color:black;background: black; 
+		 float:left;text-align: center; line-height: 40px; color:white; font-size: 2em;  margin-left: 10px;margin-right:10px; font-weight: bold;}
+		header #menu{width:2000px;height:40px;position:relative;left:calc(50% - 350px);transition: all 0.3s; opacity: 0;}
+		#sectionA{background: black;  transition: all 1s;}
+		#sectionB{background: red; transition: all 1s;}
+		#sectionC{background: url('fancy.png'); background-size:auto 100%; transition: all 1s;}
+		#sectionD{background: url('2.png'); background-size:100% auto;background-position: 0px -120px; transition: all 1s;}
+		#sectionE{background: black;}
+		#sectionF{background: black;}
+		h1 {color: white; text-align: center; position: relative; top:350px; font-size: 5em; font-weight: 900;}
+		h2 {color: white; text-align: center; position: relative; margin-top:0; font-size: 3em; font-weight: 700;}
+		#titleB {color: white; text-align: center; position: relative; top:500px; text-shadow: 4px 4px black; transition: all 1s;}
+		
+	</style>
+</head>
+
+<body>
+	<header id="header">
+	<div id="menu">
+		<ul>
+			<li id="menuA">C</li>
+			<li id="menuB">H</li>
+			<li id="menuC">A</li>
+			<li id="menuD">E</li>
+			<li id="menuE">N</li>
+			<li id="menuF">Y</li>
+		</ul>
+	</div>
+	</header> 
+	<div class="section" id="sectionA">
+		<h1 id="titleA">CHAENY</h1>
+	</div>
+	<div class="section" id="sectionB">
+		<h2 id="titleB" >BETTER DAYS ARE COMING.<br>
+			BETTER DAYS ARE COMING.<br>
+			BETTER DAYS ARE COMING.<br>
+			BETTER DAYS ARE COMING.</h2>
+	</div>
+	<div class="section" id="sectionC">
+		<img id = "heart" img src="instagram.gif" img style="margin-top: 30%; margin-left: 50%; width: 200px; height: 100px;" > 
+	</div>
+	<div class="section" id="sectionD">
+		<h1 id="titleC"> Who cares? </h1>
+			
+		</div>
+	<div class="section" id="sectionE">
+		<h1 id="titleD"> Thanks </h1>
+	</div>
+	<div class="section" id="sectionF">
+		<h1 id="titleE"> Thanks </h1>
+	</div>
+<script>
+	window.onscroll = function(){
+		console.log(document.body.scrollTop);
+		var scrollH = document.body.scrollTop;
+			
+			if(scrollH >50){
+			header.style.position = "fixed";
+			header.style.zIndex = "9999";
+			menu.style.left = "0px";
+			menu.style.opacity = "1";
+			}else{			
+			header.style.position = "relative";
+			menu.style.left = "calc(50%)";
+			menu.style.opacity = "0";}
+
+			if(scrollH > 51 && scrollH < 500){
+			sectionA.style.background = "white";
+			titleA.style.color = "black";
+			titleA.style.fontSize = "10em";
+			titleA.style.fontWeight = "bold";
+			}else{
+			sectionA.style.background = "black";
+			titleA.style.color = "white";
+			titleA.style.fontSize= "5em";
+			titleA.style.fontWeight= "900";
+			}
+
+			if(scrollH > 52 && scrollH < 950){
+			menuA.style.opacity = "1";}
+			else{
+			menuA.style.opacity = "0";	
+				}
+
+			if(scrollH > 951 && scrollH < 1950){
+			menuB.style.opacity = "1";}
+			else{
+			menuB.style.opacity = "0";	
+				}
+
+			if(scrollH > 2000 && scrollH < 2400){
+			heart.style.width = "200px";
+			heart.style.height = "100px";
+			
+			}else{
+			heart.style.width = "0px";
+			heart.style.height = "0px";
+		}
+			if(scrollH > 1951 && scrollH < 2950){
+			menuC.style.opacity = "1";}
+			else{
+			menuC.style.opacity = "0";	
+				}
+			
+			if(scrollH > 2951 && scrollH < 3950){
+			menuD.style.opacity = "1";}
+			else{
+			menuD.style.opacity = "0";	
+				}
+
+			if(scrollH > 2800 && scrollH < 3400 ){
+			sectionD.style.backgroundAttachment = "fixed"; 
+				}
+
+			if(scrollH > 3951 && scrollH < 4950){
+			menuE.style.opacity = "1";}
+			else{
+			menuE.style.opacity = "0";	
+				}
+
+			if(scrollH > 5000 && scrollH < 5300 ){
+			titleE.style.fontSize = "6em";
+			titleE.style.fontWeight = "100";
+			titleE.style.transform = "rotateX(180deg)";
+			//menuB.style.background = "orange";
+		}else{
+			titleE.style.fontSize = "5em";
+			titleE.style.fontWeight = "bold";
+			titleE.style.transform = "rotateX(0deg)";
+			//menuB.style.background = "white";
+		}
+
+		if(scrollH > 4951 && scrollH < 5950){
+			menuF.style.opacity = "1";}
+			else{
+			menuF.style.opacity = "0";	
+				}
+
+
+	//이부분 아무리 찾아봐도 모르겠습니다ㅠㅠ
+	window.onMouseOver = function() {
+		console.log(document.titleB.onMouseOver);
+		vtitleB.onMouseOver = function() {
+		var A = document.titleB.onMouseOver
+
+		if(A = onMouseOver){
+		titleB.style.textShadow="2px 2px black"; }
+		else {titleB.textShadow=" 4px 4px black";}
+
+
+	}
+		}
+}
+</script>
+
+</body>
