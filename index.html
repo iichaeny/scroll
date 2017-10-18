@@ -11,16 +11,21 @@
 		 header {background: black;}
 		 header li{width:40px;height:40px;color:black;background: black; 
 		 float:left;text-align: center; line-height: 40px; color:white; font-size: 2em;  margin-left: 10px;margin-right:10px; font-weight: bold;}
-		header #menu{width:2000px;height:40px;position:relative;left:calc(50% - 350px);transition: all 0.3s; opacity: 0;}
+		header #menu{width:1400px;height:40px;position:relative;left:calc(50% - 350px);transition: all 0.3s; opacity: 0;}
 		#sectionA{background: black;  transition: all 1s;}
 		#sectionB{background: red; transition: all 0.7s;}
 		#sectionC{background: url('fancy.png'); background-size:auto 100%; transition: all 1s;}
 		#sectionD{background: url('2.png'); background-size:100% auto;background-position: 0px -120px; transition: all 1s;}
-		#sectionE{background: black;}
+		#sectionE{background: white;}
 		#sectionF{background: black;}
 		h1 {color: white; text-align: center; position: relative; top:350px; font-size: 5em; font-weight: 900;}
 		h2, h3, h4, h5 {color: white; text-align: center; position: relative; margin-top:0; font-size: 3em; font-weight: 700;}
+		#titleA {transition: all 1s;}
 		#titleB, #stitle2, #stitle3, #stitle4 {color: white; text-align: center; position: relative; top:350px; text-shadow: 4px 4px black; transition: all 0.7s;}
+		#titleC {transition: all 1s;}
+		#titleD {font-size: 0.5em; font-weight: bold; color: gray;}
+		#titleE {transition: all 1s;}
+
 		
 	</style>
 </head>
@@ -55,7 +60,7 @@
 			
 		</div>
 	<div class="section" id="sectionE">
-		<h1 id="titleD">  </h1>
+		<h1 id="titleD"> I don't wanna do HOMEWORK </h1>
 	</div>
 	<div class="section" id="sectionF">
 		<h1 id="titleE"> Thanks </h1>
@@ -141,7 +146,7 @@
 			menuD.style.opacity = "0";	
 			}
 
-		if(scrollH > 2000){
+		if(scrollH > 2000 && scrollH < 3350 ){
 			sectionD.style.backgroundAttachment = "fixed"; }
 
 		if(scrollH > 3000 && scrollH < 3350 ){
@@ -150,24 +155,36 @@
 			titleC.innerHTML = "Who cares?"
 			}
 			
-
-
 		if(scrollH > 3951 && scrollH < 4950){
 			menuE.style.opacity = "1";}
 		else{
 			menuE.style.opacity = "0";	
 				}
 
+		if(scrollH > 3900 && scrollH < 4100){
+			titleD.style.fontSize = "3em";
+			titleD.style.color = "red";
+			}
+		else{
+			titleD.style.fontSize = "0.5em";
+			titleD.style.color = "gray";
+			
+				}
+
+		if(scrollH > 3900)
+			{titleD.style.paddingTop = "200px";}
+			else {titleD.style.paddingTop = "0px";}
+
 		if(scrollH > 5000 && scrollH < 5300 ){
 			titleE.style.fontSize = "6em";
 			titleE.style.fontWeight = "100";
 			titleE.style.transform = "rotateX(180deg)";
-			//menuB.style.background = "orange";
+		
 		}else{
 			titleE.style.fontSize = "5em";
 			titleE.style.fontWeight = "bold";
 			titleE.style.transform = "rotateX(0deg)";
-			//menuB.style.background = "white";
+		
 		}
 
 		if(scrollH > 4951 && scrollH < 5950){
@@ -176,21 +193,7 @@
 			menuF.style.opacity = "0";	
 				}
 
-
-	//이부분 아무리 찾아봐도 모르겠습니다ㅠㅠ
-	window.onMouseOver = function() {
-		console.log(document.titleB.onMouseOver);
-		vtitleB.onMouseOver = function() {
-		var A = document.titleB.onMouseOver
-
-		if(A = onMouseOver){
-		titleB.style.textShadow="2px 2px black"; }
-		else {titleB.textShadow=" 4px 4px black";}
-
-
 	}
-		}
-}
 </script>
 
 </body>
